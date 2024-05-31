@@ -34,7 +34,7 @@ void AObjectSpawner::SpawnObject(TSubclassOf<AActor> ObjectToSpawn, int32 Number
 			for (int32 i = 0; i < NumberObjects; i++) 
 			{
 				//FVector SpawnLocation = FMath::RandPointInBox(FBox(FVector(-1000.f, -1000.f, -1000.f), FVector(1000.f, 1000.f, 1000.f)));
-				FVector SpawnLocation = FVector(FMath::FRandRange(-1000.f, 1000.f), FMath::FRandRange(-1000.f, 1000.f), 50.f);
+				FVector SpawnLocation = FVector(FMath::FRandRange(-1000.f, 1000.f), FMath::FRandRange(-1000.f, 1000.f), 150.f);
 				FRotator SpawnRotation = FRotator::ZeroRotator;
 
 				AActor* SpawnedObject = World->SpawnActor<AActor>(ObjectToSpawn, SpawnLocation, SpawnRotation);

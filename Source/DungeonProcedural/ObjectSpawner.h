@@ -16,7 +16,7 @@ public:
 	AObjectSpawner();
 
 	UFUNCTION(BlueprintCallable, Category = "Debug Spawner")
-	void SpawnObject(TSubclassOf<AActor> ObjectToSpawn, int32 NumObjects);
+	void SpawnObject(TSubclassOf<AActor> ObjectToSpawn, int32 NumObjects, float minValueSpawn, float maxValueSpawn);
 
 	UFUNCTION(BlueprintCallable, Category = "Debug Spawner")
 	void CreateRoom(TSubclassOf<AActor> Floor, TSubclassOf<AActor> Walls);

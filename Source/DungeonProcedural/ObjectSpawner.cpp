@@ -25,7 +25,7 @@ void AObjectSpawner::Tick(float DeltaTime)
 
 }
 
-void AObjectSpawner::SpawnObject(TSubclassOf<AActor> ObjectToSpawn, int32 NumberObjects)
+void AObjectSpawner::SpawnObject(TSubclassOf<AActor> ObjectToSpawn, int32 NumberObjects, float minValueSpawn = -1000.f, float maxValueSpawn = 1000.f)
 {
 	if (ObjectToSpawn != nullptr) {
 		UWorld* World = GetWorld();
@@ -34,7 +34,7 @@ void AObjectSpawner::SpawnObject(TSubclassOf<AActor> ObjectToSpawn, int32 Number
 			for (int32 i = 0; i < NumberObjects; i++) 
 			{
 				//FVector SpawnLocation = FMath::RandPointInBox(FBox(FVector(-1000.f, -1000.f, -1000.f), FVector(1000.f, 1000.f, 1000.f)));
-				FVector SpawnLocation = FVector(FMath::FRandRange(-1000.f, 1000.f), FMath::FRandRange(-1000.f, 1000.f), 150.f);
+				FVector SpawnLocation = FVector(FMath::FRandRange(-1000.f, 1000.f), FMath::FRandRange(minValueSpawn, maxValueSpawn), 150.f);
 				FRotator SpawnRotation = FRotator::ZeroRotator;
 
 				AActor* SpawnedObject = World->SpawnActor<AActor>(ObjectToSpawn, SpawnLocation, SpawnRotation);

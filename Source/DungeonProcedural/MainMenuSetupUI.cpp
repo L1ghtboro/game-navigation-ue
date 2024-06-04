@@ -24,7 +24,7 @@ void UMainMenuSetupUI::NativeConstruct() {
 }
 
 void UMainMenuSetupUI::OnTestMapStaticClicked() {
-	UGameplayStatics::OpenLevel(this, FName("TestMapStatic"));
+	UGameplayStatics::OpenLevel(this, FName("TestStaticMap"));
 }
 
 void UMainMenuSetupUI::OnTestMapClicked() {

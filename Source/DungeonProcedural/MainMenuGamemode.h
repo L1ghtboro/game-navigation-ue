@@ -8,5 +8,5 @@
 UCLASS() class DUNGEONPROCEDURAL_API AMainMenuGamemode : public AGameMode {
 	GENERATED_BODY()
 public:
-	//AMainMenuGamemode();
+	AMainMenuGamemode();
 };

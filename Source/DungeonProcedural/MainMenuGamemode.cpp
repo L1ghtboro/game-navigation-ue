@@ -2,6 +2,6 @@
 #include "MainMenuGamemode.h"
 #include "MainMenuCharacterContoller.h"
 
-//AMainMenuGamemode::AMainMenuGamemode() {
-//	//PlayerControllerClass = AMainMenuCharacterContoller::StaticClass();
-//}
+AMainMenuGamemode::AMainMenuGamemode() {
+	PlayerControllerClass = AMainMenuCharacterContoller::StaticClass();
+}
